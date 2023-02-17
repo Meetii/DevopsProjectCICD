@@ -19,7 +19,10 @@ public class BookController {
     public ResponseEntity<String> welcome() {
         return ResponseEntity.ok("Project for Devops!");
     }
-
+    @GetMapping("/welcome")
+    public ResponseEntity<String> welcome2() {
+        return ResponseEntity.ok("Testing github pipeline!");
+    }
     @GetMapping("/books")
     public ResponseEntity<List<Book>> getAllBooks() {
         return ResponseEntity.ok(bookRepository.findAll());
